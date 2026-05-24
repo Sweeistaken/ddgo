@@ -80,7 +80,7 @@ func QueryWithProxy(query string, maxResult int, proxyUrl string) ([]Result, err
 		title := titleNode.Text()
 		ref, _ := titleNode.Attr("href")
 
-		results = append(results[:], Result{title, info, ref})
+		results = append(results[:], Result{title, info, getDDGUrl(ref)})
 
 	}
 
