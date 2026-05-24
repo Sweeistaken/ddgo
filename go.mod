@@ -1,4 +1,4 @@
-module github.com/evgensoft/ddgo
+module github.com/Sweeistaken/ddgo
 
 go 1.23.0
 

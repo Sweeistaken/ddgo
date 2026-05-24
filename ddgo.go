@@ -11,8 +11,8 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-// DefaultUserAgent defines a default value for user-agent header.
-const DefaultUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+// Pretend I am an old browser
+const DefaultUserAgent = "Dillo/3.3.0"
 
 // Result holds the returned query data
 type Result struct {
@@ -78,11 +78,7 @@ func QueryWithProxy(query string, maxResult int, proxyUrl string) ([]Result, err
 
 		info := node.Find(".result__snippet").Text()
 		title := titleNode.Text()
-		ref := ""
-
-		if len(titleNode.Nodes) > 0 && len(titleNode.Nodes[0].Attr) > 2 {
-			ref = getDDGUrl(titleNode.Nodes[0].Attr[2].Val)
-		}
+		ref, _ := titleNode.Attr("href")
 
 		results = append(results[:], Result{title, info, ref})
 
