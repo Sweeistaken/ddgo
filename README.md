@@ -7,7 +7,7 @@
 To use the `ddgo` package, you need to have Go installed on your machine. You can install the package using the following command:
 
 ```bash
-go get github.com/Sweeistaken/ddgo
+go get swee.codes/ddgo
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/Sweeistaken/ddgo"
+	"swee.codes/ddgo"
 )
 
 func main() {

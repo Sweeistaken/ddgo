@@ -1,4 +1,4 @@
-module github.com/Sweeistaken/ddgo
+module swee.codes/ddgo
 
 go 1.23.0
 
